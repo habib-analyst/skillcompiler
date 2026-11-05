@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "seed": 117002,
+    "n": 1200
+  },
+  "arms": {
+    "textual": {
+      "success": 0.7966666666666666,
+      "syn_per_task": 0.0,
+      "hit_rate": 0.0,
+      "bank_size": 0
+    },
+    "nobank": {
+      "success": 0.9366666666666666,
+      "syn_per_task": 3.0,
+      "hit_rate": 0.0,
+      "bank_size": 0
+    },
+    "bank": {
+      "success": 0.9366666666666666,
+      "syn_per_task": 0.025,
+      "hit_rate": 0.9916666666666667,
+      "bank_size": 30
+    },
+    "bank_nogate": {
+      "success": 0.515,
+      "syn_per_task": 0.025,
+      "hit_rate": 0.9916666666666667,
+      "bank_size": 30
+    },
+    "bank_lax": {
+      "success": 0.45916666666666667,
+      "syn_per_task": 0.004166666666666667,
+      "hit_rate": 0.998611111111111,
+      "bank_size": 5
+    }
+  },
+  "flip": {
+    "rate": 0.3275,
+    "ci95": [
+      0.2825,
+      0.375
+    ],
+    "n_tasks": 400,
+    "k_reps": 3
+  },
+  "diffs": {
+    "bank_minus_textual": {
+      "mean": 0.14,
+      "ci95": [
+        0.11916666666666664,
+        0.1625000000000001
+      ]
+    },
+    "bank_minus_nobank": {
+      "mean": 0.0,
+      "ci95": [
+        -0.008333333333333304,
+        0.008333333333333304
+      ]
+    },
+    "bank_minus_nogate": {
+      "mean": 0.42166666666666663,
+      "ci95": [
+        0.3933333333333333,
+        0.44999999999999996
+      ]
+    },
+    "bank_minus_lax": {
+      "mean": 0.4775,
+      "ci95": [
+        0.44916666666666666,
+        0.5075000000000001
+      ]
+    }
+  },
+  "benign": {
+    "n_textual_success": 956,
+    "bank_success_on_those": 0.9811715481171548
+  },
+  "bars": {
+    "D1_flip_ge_0.25_and_ci_lo_ge_0.18": true,
+    "D2_textual_success_le_0.90": true,
+    "M1_bank_minus_textual_ge_0.08_and_ci_lo_ge_0.03": true,
+    "M2_bank_cost_le_0.50_x_nobank": true,
+    "M3_bank_minus_nogate_ge_0.30_and_ci_lo_ge_0.20": true,
+    "M4_bank_minus_lax_ge_0.30_and_ci_lo_ge_0.20": true,
+    "M5_bank_minus_nobank_ge_minus_0.03_and_ci_lo_ge_minus_0.08": true,
+    "B1_benign_ge_0.95": true
+  },
+  "all_bars_pass": true
+}

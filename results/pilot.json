@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "seed": 117001,
+    "n": 300
+  },
+  "arms": {
+    "textual": {
+      "success": 0.8266666666666667,
+      "syn_per_task": 0.0,
+      "hit_rate": 0.0,
+      "bank_size": 0
+    },
+    "nobank": {
+      "success": 0.9466666666666667,
+      "syn_per_task": 3.0,
+      "hit_rate": 0.0,
+      "bank_size": 0
+    },
+    "bank": {
+      "success": 0.95,
+      "syn_per_task": 0.1,
+      "hit_rate": 0.9666666666666667,
+      "bank_size": 30
+    },
+    "bank_nogate": {
+      "success": 0.2733333333333333,
+      "syn_per_task": 0.1,
+      "hit_rate": 0.9666666666666667,
+      "bank_size": 30
+    },
+    "bank_lax": {
+      "success": 0.22,
+      "syn_per_task": 0.016666666666666666,
+      "hit_rate": 0.9944444444444445,
+      "bank_size": 5
+    }
+  },
+  "flip": {
+    "rate": 0.36,
+    "ci95": [
+      0.3,
+      0.425
+    ]
+  },
+  "diffs": {
+    "bank_minus_textual": {
+      "mean": 0.1233333333333333,
+      "ci95": [
+        0.08333333333333337,
+        0.16666666666666663
+      ]
+    },
+    "bank_minus_nogate": {
+      "mean": 0.6766666666666666,
+      "ci95": [
+        0.6233333333333333,
+        0.7266666666666667
+      ]
+    }
+  },
+  "pilot_gates": {
+    "P1_flip_ge_0.15": true,
+    "P2_bank_minus_textual_ge_0.10": true,
+    "P3_bank_cost_le_0.70_x_nobank": true,
+    "P4_bank_size_ge_10": true,
+    "P5_bank_minus_nogate_ge_0.10": true
+  },
+  "pilot_gate_pass": true
+}
